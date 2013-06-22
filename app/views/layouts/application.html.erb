@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="wrapper" class="round">
+		<header>
+			<h1 rel="title">Knkt.me!</h1>
+		</header>
+		<section>
+			<%= yield %>
+		</section>
+	</div>
+	<footer>
 
-<%= yield %>
-
+	</footer>
 </body>
 </html>

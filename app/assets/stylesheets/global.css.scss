@@ -1,0 +1,29 @@
+body
+{background: #5A5C73;}
+
+#wrapper
+{
+	width: 60%;
+	margin: 0 auto;
+	background: #ffddfc;
+	text-align: center;
+	padding: 2em;
+	border: 1em solid #fd31bc;
+	border-radius: 5em;
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+}
+
+h1
+{
+	margin: .25em; font-size: 4em;
+}
+
+
+input[type=text]
+{
+	border: .33em solid;
+	width: 80%;
+	padding: .25em .5em;
+	margin: .25em;
+}

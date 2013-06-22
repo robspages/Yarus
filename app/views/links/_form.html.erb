@@ -12,10 +12,9 @@
   <% end %>
   <%= f.hidden_field :user_id %>
   <div class="field">
-    <%= f.label :fullurl %><br />
-    <%= f.text_area :fullurl %>
+    <%= f.text_field :fullurl, :class=>'round'  %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class=>'btn btn-submit' %>
   </div>
 <% end %>
