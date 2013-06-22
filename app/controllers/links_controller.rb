@@ -13,8 +13,9 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
-    @link = Link.find(params[:id])
 
+    @link = Link.find(params[:id])
+    @short_url = ShortUrl.find(@link.shorturl)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @link }

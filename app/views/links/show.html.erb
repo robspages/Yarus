@@ -1,20 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Fullurl:</b>
-  <%= @link.fullurl %>
-</p>
-
-<p>
-  <b>Shorturl:</b>
-  <%= @link.shorturl %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @link.user_id %>
-</p>
-
+<p><%= request.host_with_port %>/<%= @short_url.shortcode %>
 
 <%= link_to 'Edit', edit_link_path(@link) %> |
 <%= link_to 'Back', links_path %>

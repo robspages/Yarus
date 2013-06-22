@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621012115) do
+ActiveRecord::Schema.define(:version => 20130622005221) do
 
   create_table "httpstatuses", :force => true do |t|
     t.string   "status_code"
@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(:version => 20130621012115) do
     t.boolean  "active"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "link_id"
   end
+
+  add_index "short_urls", ["shortcode"], :name => "index_short_urls_on_shortcode", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "name"
