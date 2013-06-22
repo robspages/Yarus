@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+results = []
+
+(1...999).each do |i|
+	results << i
+end
+
+[*'a'..'ZZZ'].each do |i|
+	results << i
+end
+
+results.each do |hash|
+	ShortUrl.create( shortcode: hash, active: false)
+end 
