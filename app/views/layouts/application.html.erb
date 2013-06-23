@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Knktr3</title>
+  <title>Knkt Me :: Social URL Shortener</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<div id="wrapper" class="round">
-		<header>
-			<h1 rel="title">Knkt.me!</h1>
-		</header>
-		<section>
-			<%= yield %>
-		</section>
-	</div>
-	<footer>
+<body class="flext-containter">
+	<header class="flex-item">
+		<h1 rel="title">Knkt.me!</h1>
+	</header>
+	<section class="flex-item">
+		<%= yield %>
+	</section>
+	<footer class="flex-item">
 		<script type="text/javascript"><!--
 			google_ad_client = "ca-pub-8179665332426373";
 			/* banner-media */

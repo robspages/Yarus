@@ -1,35 +1,171 @@
+
+
+@mixin flex 
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin centerhoz
+{
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+@mixin centervert
+{
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+@mixin centercenter
+{
+	@include centerhoz;
+	@include centervert;
+}
+
+
+@mixin shadow($t,$l,$b,$r,$c)
+{
+  -moz-box-shadow: $t $l $b $r $c;
+  -webkit-box-shadow: $t $l $b $r $c;
+  box-shadow: $t $l $b $r $c;
+}
+
 body
-{background: #5A5C73;}
-
-#wrapper
 {
-	width: 60%;
-	margin: 0 auto;
-	background: #ffddfc;
+	height: 100%;
+	width: 100%;
+}
+
+header
+{
+	background: #34495E;
+	color: #EEE;
+	width: 100%;
+	padding: .5em .8em;
+	@include shadow(0, 8px, 6px, -6px, rgba(0,0,0,0.50));
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    }
+
+.flex-item:nth-child(1) {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(3) {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    -webkit-flex: 2 1 auto;
+    -ms-flex: 2 1 auto;
+    flex: 2 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+/*
+    Legacy Firefox implementation treats all flex containers
+    as inline-block elements.
+*/
+
+@-moz-document url-prefix() {
+.flex-container {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    }
+
+}
+
+section
+{
 	text-align: center;
-	padding: 2em;
-	border: .33em solid #fd31bc;
-	border-radius: 5em;
-	-moz-border-radius: 5em;
-	-webkit-border-radius: 5em;
+	@include centerhoz;
+	background: #fff url(assets/puppy.jpg) no-repeat right;
 }
-
-h1
-{
-	margin: .25em; font-size: 4em;
-}
-
 
 input[type=text]
 {
-	border: .25em solid;
-	width: 80%;
-	padding: .25em .5em;
-	margin: .25em;
+	width: 70%;
+	margin: .4em;
+	padding: .2em .4em;
+	font-size: 1.2em;
 }
 
-#shrtLink
+footer
 {
-	font-size: 1.2em;
-	font-weight: 700;
+	@include centerhoz;
+	background-color: #ccc;
+	height: 100%;
 }
