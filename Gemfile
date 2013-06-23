@@ -1,15 +1,8 @@
 source 'https://rubygems.org'
 
 ruby '1.9.3'
-
 gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-group :development do
-	gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
-end 
 gem 'pg'
 
 # Gems used only for assets and not required
@@ -27,10 +20,13 @@ gem 'yaml_db'
 gem 'jquery-rails'
 gem 'backbone-on-rails'
 
-#search tools
-gem 'geocoder' # radius search 
-gem 'sunspot_rails', "<= 2.0.0"
-gem 'kaminari'
+# Auth
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google'
+gem 'omniauth-linkedin'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
