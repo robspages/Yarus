@@ -8,7 +8,7 @@ body
 	background: #ffddfc;
 	text-align: center;
 	padding: 2em;
-	border: 1em solid #fd31bc;
+	border: .33em solid #fd31bc;
 	border-radius: 5em;
 	-moz-border-radius: 5em;
 	-webkit-border-radius: 5em;
@@ -22,7 +22,7 @@ h1
 
 input[type=text]
 {
-	border: .33em solid;
+	border: .25em solid;
 	width: 80%;
 	padding: .25em .5em;
 	margin: .25em;
