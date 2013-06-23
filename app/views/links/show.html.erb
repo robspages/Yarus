@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= request.host_with_port %>/<%= @short_url.shortcode %>
+<p id="shrtLink"><%= request.host_with_port %>/<%= @short_url.shortcode %></p>
+
+<p class="soon">Coming soon: Sharing buttons! Lightbox sharing to social apps</p>
+
 
 <%= link_to 'Edit', edit_link_path(@link) %> |
 <%= link_to 'Back', links_path %>
