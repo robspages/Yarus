@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Link:</b>
+  <%= @analytic.link_id %>
+</p>
+
+<p>
+  <b>Short url:</b>
+  <%= @analytic.short_url_id %>
+</p>
+
+<p>
+  <b>Clickcount:</b>
+  <%= @analytic.clickcount %>
+</p>
+
+
+<%= link_to 'Edit', edit_analytic_path(@analytic) %> |
+<%= link_to 'Back', analytics_path %>

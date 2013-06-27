@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622005221) do
+ActiveRecord::Schema.define(:version => 20130626012922) do
+
+  create_table "analytics", :force => true do |t|
+    t.integer  "link_id"
+    t.integer  "short_url_id"
+    t.integer  "clickcount"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "clicks", :force => true do |t|
+    t.string   "referer"
+    t.string   "ip"
+    t.datetime "clickdate"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "httpstatuses", :force => true do |t|
     t.string   "status_code"

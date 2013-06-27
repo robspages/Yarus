@@ -1,4 +1,10 @@
 Knktr3::Application.routes.draw do
+  resources :clicks
+
+
+  resources :analytics
+
+
   get "pages/about"
   get "pages/contact"
 

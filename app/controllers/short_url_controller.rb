@@ -6,6 +6,7 @@ rescue_from Exception, :with => :error_render_method
   def show
     @short_url = ShortUrl.where(:shortcode => params[:id]).first
     @link = Link.find(@short_url.link_id)
+    @click = Click.new(:ip => request.remote_ip, :referer => request.referer, :clickdate => Time.now)
     redirect_to @link.fullurl, :status => 301
   end
 

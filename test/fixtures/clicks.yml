@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  referer: 
+  ip: 
+  clickdate: 2013-06-25 21:29:22
+
+two:
+  referer: 
+  ip: 
+  clickdate: 2013-06-25 21:29:22
