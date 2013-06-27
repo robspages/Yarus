@@ -152,9 +152,7 @@ section
 {
 	text-align: center;
 	@include centerhoz;
-	/* background: #fff url(/assets/puppy.jpg) no-repeat right; */
-	background-size: auto;
-	min-height: 15em;
+	background: #fff url(assets/puppy.jpg) no-repeat right;
 }
 
 input[type=text]
@@ -170,8 +168,4 @@ footer
 	@include centerhoz;
 	background-color: #ccc;
 	height: 100%;
-	min-height: 20%;
-	border-top: 1px solid #000;
-	margin: 5em 0;
-	text-align: center;
 }
