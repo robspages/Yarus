@@ -13,12 +13,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-#yaml_db for database dumps 
-gem 'yaml_db'
-
 #JS libs
 gem 'jquery-rails'
-gem 'backbone-on-rails'
 
 # Auth
 gem 'devise'
