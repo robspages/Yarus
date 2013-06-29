@@ -28,6 +28,10 @@ gem 'omniauth-twitter'
 gem 'omniauth-google'
 gem 'omniauth-linkedin'
 
+
+#search tools
+gem 'geocoder' # for ip geocoding on metrics 
+
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
