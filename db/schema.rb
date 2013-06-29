@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626012922) do
+ActiveRecord::Schema.define(:version => 20130629010307) do
 
   create_table "analytics", :force => true do |t|
     t.integer  "link_id"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20130626012922) do
     t.datetime "clickdate"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.decimal  "Longitude"
+    t.decimal  "Latitude"
   end
 
   create_table "httpstatuses", :force => true do |t|
