@@ -10,29 +10,26 @@ $(document).ready ->
       facebook: true
       twitter: true
       linkedin: true
-      pinterest: true
 
     options:
       enableCounter: false
 
     buttons:
       googlePlus:
-        size: "tall"
+        url: '/assets/images/social/googleplus/googleplus-128.png'
 
       facebook:
-        layout: "standard"
+         url: '/assets/images/social/facebook/facebook-128.png'
 
       twitter:
-        count: "vertical"
+         url: '/assets/images/social/twitter/twitter-128.png'
 
       linkedin:
-        counter: "top"
+         url: '/assets/images/social/linkedin/linkedin-128.png'
 
-      pinterest:
-        media: "http://sharrre.com/img/example1.png"
-        description: $("#shareme").data("text")
-        layout: "vertical"
-
+	  pintrest:
+	   	 url: '/assets/images/social/pintrest/pintrest-128.png'
+	   	 
     enableHover: false
     enableCounter: false
     enableTracking: true
